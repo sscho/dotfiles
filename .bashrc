@@ -1,2 +1,1 @@
-PS1="\[\033[1;34m\]\W$\[\033[0m\] "
-export PS1
+if [[ $TMUX ]]; then source ~/.tmux-git/tmux-git.sh; fi
