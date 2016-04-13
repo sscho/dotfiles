@@ -10,7 +10,10 @@ rm -rf ~/.vim ~/.vimrc
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/.vim ~/.vim
 
-uname -a | grep 'Darwin' &> /dev/null
+rm -rf ~/.fonts
+ln -s ~/.dotfiles/.fonts ~/.fonts
+
+uname -a | grep 'Linux|Darwin' &> /dev/null
 
 # If this is my Mac OS X
 if [ $? -eq 0 ]; then
