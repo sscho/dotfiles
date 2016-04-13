@@ -1,10 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 rm ~/.vimrc ~/.tmux.conf ~/.tmux
 
-uname -a | grep 'Darwin' &> /dev/null
+uname -a | grep 'Linux|Darwin' &> /dev/null
 
 # If this is a Mac OS X
 if [ $? == 0 ]; then
+	echo 'hi'
 	# tmux
 	ln -s ~/.dotfiles/.tmux-mac.conf ~/.tmux.conf
 	ln -s ~/.dotfiles/.tmux-mac ~/.tmux
