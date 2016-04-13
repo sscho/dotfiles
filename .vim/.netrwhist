@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/shawn/Dropbox/Homestead/Projects/snipcademy/resources/views/code/tutorials/series/javascript/node'
+let g:netrw_dirhist_2='/home/shawn/.tmux'
+let g:netrw_dirhist_3='/home/shawn/Dropbox/test/express-basics/.git'
+let g:netrw_dirhist_4='/home/scho/.dotfiles/.vim'

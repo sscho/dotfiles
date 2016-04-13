@@ -1,4 +1,5 @@
 # workflow for homestead
+alias pb='xclip -selection clipboard'
 alias audio='sudo killall coreaudiod'
 alias vm='ssh vagrant@127.0.0.1 -p 2222'
 alias scs='ssh forge@45.55.134.181'
