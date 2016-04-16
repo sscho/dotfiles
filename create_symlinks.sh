@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Check to see if this is a Linux Platform
-uname -a | grep 'Linux|Darwin' &> /dev/null
 
 echo 'Linking tmux files...'
 # tmux
@@ -21,22 +19,25 @@ rm -rf ~/.fonts
 ln -s ~/.dotfiles/.fonts ~/.fonts
 
 # Check to see that this is a Linux platform
-uname -a | grep 'Linux|Darwin' &> /dev/null
+uname -a | grep 'shawn-home' &> /dev/null
 
-# If this is my Mac OS X
-if [ $? -eq 0 ]; then
-	# tmux
-	ln -s ~/.dotfiles/.tmux-mac ~/.tmux
+rm ~/.i3/config ~/.i3/i3blocks.conf
+
+# If this is my 
+if [ $? -eq 1 ]; then
+	echo "Setting up config files for Shawn's Home..."
+	# i3
+	ln -s ~/.dotfiles/.i3/config-home ~/.i3/config
+	ln -s ~/.dotfiles/.i3/i3blocks.conf ~/.i3/i3blocks.conf
 # Else, it's my Linux running i3wm
 else
-	echo 'Setting up i3'
-	rm ~/.i3/config ~/.i3/i3blocks.conf
+	echo "Setting up config files for Shawn's Work..."
 	# i3
-	ln -s ~/.dotfiles/.i3/config ~/.i3/config
+	ln -s ~/.dotfiles/.i3/config-work ~/.i3/config
 	ln -s ~/.dotfiles/.i3/i3blocks.conf ~/.i3/i3blocks.conf
-	echo 'Setting up tmux...'
-	# tmux
-	ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 fi
 
+# tmux
+echo 'Setting up tmux...'
+ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 
